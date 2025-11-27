@@ -13,6 +13,17 @@ pipeline{
             }
            
         }
+
+        stage("Audit"){
+            steps{
+                
+                sh "npm audit"
+                sh "npm audit fix"
+                sh "npm outdated"
+                sh "npm update"
+            }
+           
+        }
         stage("Build"){
             steps{
                 
