@@ -18,7 +18,7 @@ pipeline{
             steps{
                 
                 sh "npm audit"
-                sh "npm audit fix"
+                sh "npm audit fix --force"
                 sh "npm outdated"
                 sh "npm update"
             }
