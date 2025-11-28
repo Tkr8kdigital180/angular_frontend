@@ -5,9 +5,11 @@ pipeline{
 
         nodejs 'Node'
     }
+    
     environment {
   NODE_OPTIONS = '--openssl-legacy-provider'
-}
+   }
+   
     stages{
         stage("Install"){
             steps{
